@@ -2,9 +2,9 @@
 function TodoList() {
 
   return (
+    
+        <ul>
 
-    <ul>
-      
       <li>
         <input type = 'checkbox'/> 
         <lable> Walk the dog </lable>
@@ -25,7 +25,7 @@ function TodoList() {
       <lable> Work on homework </lable>
       </li>
 
-    </ul>
+       </ul>
    
   );
 }
