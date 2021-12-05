@@ -4,18 +4,22 @@ import React, { createElement } from 'react';
 
 function App() {
  
-  const listItems = Todos.map(function(info){
-    return info.text
-})
+  //const listItems = Todos.map(function(info){
+    //return info.text
+  //})
 
-console.log(listItems)
-
-
+//console.log(listItems)
   return (
-  <ul id ='list'>
-      {listItems}
-  </ul>
-  );
+    <ul>
+      {Todos.map((todo, index) => {
+        return (
+          <li key={index}>
+            {todo.text}
+          </li>
+        )
+        })}
+    </ul>
+    )
 }
 
 
