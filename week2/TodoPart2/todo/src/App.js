@@ -1,6 +1,6 @@
 import { Todos } from './STORE';
 import './App.css';
-import React, { createElement } from 'react';
+import TodoList from './Todo'
 
 function App() {
  
@@ -11,13 +11,7 @@ function App() {
 //console.log(listItems)
   return (
     <ul>
-      {Todos.map((todo, index) => {
-        return (
-          <li key={index}>
-            {todo.text}
-          </li>
-        )
-        })}
+      <TodoList propName = {Todos}/>
     </ul>
     )
 }
