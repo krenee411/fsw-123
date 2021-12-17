@@ -2,7 +2,6 @@ import {useState} from 'react';
 import {Todos} from './STORE.js';
 import './App.css';
 import TodoList from './TodoList'
-import TodoForm from '.TodoForm.js'
 
 
 
@@ -22,13 +21,6 @@ function App() {
     changeTodo(copiedArray)
   }
 
-  const addTodo = (text) => {
-    const copiedArray = [...todos]
-    const newTodo = {text: {text}, id: uuidv4(), isComplete: false}
-    copiedArray.push(newTodo)
-    changeTodo(copiedArray)
-  }
-
   const deleted = (my_id) => {
     const copiedArray = [...todos]
     const todoItem = copiedArray.findIndex(e => e.id === my_id)
@@ -38,7 +30,7 @@ function App() {
   return (
     <div >
       <h1>My ToDo List</h1>
-      <TodoForm addTodo = {addTodo}/>
+     
       <ul>
         <TodoList
           todos = {todos}
