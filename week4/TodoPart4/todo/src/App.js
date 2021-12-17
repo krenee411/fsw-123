@@ -2,7 +2,8 @@ import {useState} from 'react';
 import {Todos} from './STORE.js';
 import './App.css';
 import TodoList from './TodoList'
-import TodoForm from '.TodoForm.js'
+import TodoForm from './TodoForm.js'
+import {v4 as uuidv4} from 'uuid';
 
 
 
@@ -24,7 +25,7 @@ function App() {
 
   const addTodo = (text) => {
     const copiedArray = [...todos]
-    const newTodo = {text: {text}, id: uuidv4(), isComplete: false}
+    const newTodo = {text: `${text}`, id: uuidv4(), isComplete: false}
     copiedArray.push(newTodo)
     changeTodo(copiedArray)
   }
