@@ -9,7 +9,7 @@ export default function TodoList(props){
                     text = {e}
                     completed = {props.completed}
                     deleted = {props.deleted}
-                    editItem ={props.editItem}
+                    editItem ={props.edit}
                  />
             )   
         })

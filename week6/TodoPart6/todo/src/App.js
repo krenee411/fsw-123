@@ -38,9 +38,18 @@ function App() {
     changeTodo(copiedArray)
   }
 
-  const editItem = (my_id) => {
+  const editItem = (my_id,update) => {
     const copiedArray = [...todos]
     const todoItem = copiedArray.findIndex(e => e.id === my_id)
+    const updateTodos =  copiedArray.map((todo,index) =>{
+      if(index === todoItem){
+        todo.text = update.text
+        return todo
+      }else{
+        return todo
+      }
+    })
+      changeTodo(updateTodos)
   }
 
   return (
