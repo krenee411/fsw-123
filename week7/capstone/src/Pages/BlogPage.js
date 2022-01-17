@@ -5,6 +5,7 @@ export default function Blog(){
     return(
     <body id='body'>
         <h1 id='blogHeader'>Lets Blog About It!!</h1>
+        <div class='undeline'>
         <div class= "card">
          <details><summary>The Dybbuk Box</summary>
                 <p class='blogP'>Dybbuk is from Jewish Mythology it is a malevolent wandering spirit that can posses a living persons body or an object.
@@ -39,6 +40,8 @@ export default function Blog(){
                     museum in Vegas. The box is still on display there today. Are you brave enough to be in the same room as this evil box?</span>
                 </p>  </details>      
      </div>
+     </div>
+     <div class='undeline'>
      <div class= "card">
         <details><summary>Jeffrey Dahmer </summary>
                 <p class='blogP'>
@@ -79,6 +82,8 @@ export default function Blog(){
                   David Thomas: 23, Curtis Straughter: 16, Errol Lindsey: 19, Tony Hughes: 31, Konerak Sinthasomphone: 14, Matt Turner: 20, Jeremiah Weinberger: 23, Oliver Lacy: 23, Joseph Bradeholt: 25.</span>   </span>                                                                                                                                                                                                
                 </p>  </details>
     </div>
+    </div>
+    <div class='undeline'>
     <div class= "card">
      <details><summary>Dispappearance of Bryce Laspisa</summary>
                 <p class='blogP'>
@@ -111,6 +116,8 @@ export default function Blog(){
                     Was he killed to this day there are still no answers.</span>
                 </p></details>
     </div>
+    </div>
+    <div class='undeline'>
     <div class= "card">
          <details><summary>Rougarou </summary>
                 <p class='blogP'>
@@ -125,6 +132,7 @@ export default function Blog(){
                     back to the woods. Crazy right this giant man wolf can take lives but can not count to 13. If you are from the south you know and fear this monster. This being said in Houma every year we do celebrate this legand, its called Rougarou Fest where people can dress up and eat good sotheren cajun cooking. 
                     So if you ever found yourself in South Louisiana keep an eye out and always keep 13 pennies in your pocket and hope you dont run in our local legand the Rougarou!!! </span>
                 </p> </details>
+    </div>
     </div>
             <AddSug/>
 
