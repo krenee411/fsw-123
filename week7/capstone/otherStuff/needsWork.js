@@ -7,7 +7,8 @@ import axios from 'axios';
 
 const App = () => {
 
-  const spotify = Credentials();  
+  const spotify = Credentials(); 
+  
 
   console.log('RENDERING APP.JS');
 
@@ -36,14 +37,14 @@ const App = () => {
     .then(tokenResponse => {      
       setToken(tokenResponse.data.access_token);
 
-      axios('https://api.spotify.com/v1/browse/categories?locale=sv_US', {
+      axios(`https://api.spotify.com/v1/search/?q=murder&type=episode&market=US&limit=20&offset=1`, {
         method: 'GET',
         headers: { 'Authorization' : 'Bearer ' + tokenResponse.data.access_token}
       })
       .then (genreResponse => {        
         setGenres({
           selectedGenre: genres.selectedGenre,
-          listOfGenresFromAPI: genreResponse.data.categories.items
+          listOfGenresFromAPI: genreResponse.data.episodes.items
         })
       });
       
@@ -57,18 +58,18 @@ const App = () => {
       listOfGenresFromAPI: genres.listOfGenresFromAPI
     });
 
-    axios(`https://api.spotify.com/v1/browse/categories/${val}/playlists?limit=10`, {
+    axios(`https://api.spotify.com/v1/episodes/${val}`, {
       method: 'GET',
       headers: { 'Authorization' : 'Bearer ' + token}
     })
     .then(playlistResponse => {
       setPlaylist({
         selectedPlaylist: playlist.selectedPlaylist,
-        listOfPlaylistFromAPI: playlistResponse.data.playlists.items
+        listOfPlaylistFromAPI: playlistResponse.data.episodes.items.description
       })
     });
 
-    console.log(val);
+    console.log(val+ "this is val");
   }
 
   const playlistChanged = val => {

@@ -1,6 +1,7 @@
 //add a new podcast to your list
 import { useState } from "react"
 import {v4 as uuidv4} from 'uuid';
+import Podcast from "./SongSearch";
 
 export default function AddForm({podName, genre, id}){
 //can i put my add function here?
@@ -13,37 +14,46 @@ export default function AddForm({podName, genre, id}){
 
     const ogdata = {podName: podName || '', genre: genre || '', id: uuidv4()}
     const [formInput, setFormInput] = useState(ogdata)
+    const [array, setArray] = useState([])
 
     const onChangeData = (e) => {
-        const {podName,value} = e.target
-        setFormInput(data => ({...data, [podName]:value}))
+        const {name,value} = e.target
+        setFormInput(data => ({...data, [name]:value}))
     }
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        //addData(formInput, id)
+        setArray([...array, formInput])
         setFormInput(ogdata)
     }
     return(
-        <form onSubmit={handleSubmit}>
-            <h1>Favorite Podcast</h1>
-            <input
-                type = 'text'
-                name = 'podName'
-                value = {formInput.podName}
-                placeholder="Podcast Name"
-                onChange = {onChangeData}
-            ></input>
+        <>
+            <form onSubmit={handleSubmit}>
+                <h1>Favorite Podcast</h1>
+                <input
+                    type = 'text'
+                    name = 'podName'
+                    value = {formInput.podName}
+                    placeholder="Podcast Name"
+                    onChange = {onChangeData}
+                ></input>
 
-            <input
-                type = 'text'
-                name = 'genre'
-                value = {formInput.genre}
-                placeholder="Podcast Genre"
-                onChange = {onChangeData}
-            ></input>
+                <input
+                    type = 'text'
+                    name = 'genre'
+                    value = {formInput.genre}
+                    placeholder="Podcast Genre"
+                    onChange = {onChangeData}
+                ></input>
 
-            <button>Add Podcast</button>
-        </form>
+                <button>Add Podcast</button>
+            </form>
+
+            <h2>{array.map(podcast => {
+                return(
+                    <div>Name: {podcast.podName} Genre: {podcast.genre}</div>
+                )
+            })}</h2>
+        </>
     )
 }

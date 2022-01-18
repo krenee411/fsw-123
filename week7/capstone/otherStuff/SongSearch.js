@@ -6,35 +6,51 @@
 // //title is what i need to get from the api....somthing like data.title
 // //maybe the href: so it will link to the page?
 
-// import axios from "axios";
-// import { useState, useEffect } from "react";
+import axios from "axios";
+import { useState, useEffect } from "react";
 
 
-// export default function Podcast() {
-//     const [token, setToken] = useState('')
+export default function Podcast() {
+    const [token, setToken] = useState('')
+    const [pod, setPod] = useState([])
 
-//     useEffect(()=>{
+    const id= "20JZFwl6HVl6yg8a4H3ZqK"
 
-//         axios('https://accounts.spotify.com/api/token', {
-//             'method': 'POST',
-//             'headers': {
-//                 'Content-Type': 'application/x-www-form-urlencoded',
-//                 'Authorization': 'Basic ' + ('839d1b6c94f540b0915d932f8d9567e6' + ':' + " 99201f9a15d04fa2afeb46775168f09f "),
-//             },
-//             data: 'grant_type=client_credentials'
-//         }).then(tokenResponse =>{
-//                 console.log(tokenResponse.data.access_token)
-//                 setToken(tokenResponse.data.access_token)
-//         }) .catch(err => console.log(err))   
+   
+    useEffect(()=>{
+
+        axios('https://accounts.spotify.com/api/token', {
+            'method': 'POST',
+            'headers': {
+                'Content-Type': 'application/x-www-form-urlencoded',
+                'Authorization': 'Basic ' + ('839d1b6c94f540b0915d932f8d9567e6' + ':' + " 99201f9a15d04fa2afeb46775168f09f "),
+            },
+            data: 'grant_type=client_credentials'
+        }).then(tokenresponse =>{
+                console.log(tokenresponse.data.access_token)
+                setToken(tokenresponse.data.access_token)
+
+                axios(`https://api.spotify.com/v1/artist/${id}/top-tracks`, {
+                'method': 'GET',
+                'headers':{
+                    'Content-Type': 'application/json',
+                    'Accept': 'application/json',
+                    'Authorization' : 'Bearer ' + tokenresponse.data.access_token
+                }
+            }).then(podResponse =>{
+                console.log(podResponse.data.pod);
+                setPod(podResponse.data.pod)
+            }).catch(err => console.log(err))
+        }) .catch(err => console.log(err))   
         
-//     },[])
+    },[])
 
-//     return(
-//         <div>
+    return(
+        <div>
 
-//         </div>
-//     )
-// }
+        </div>
+    )
+}
 
 
 

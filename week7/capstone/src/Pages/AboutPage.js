@@ -17,7 +17,7 @@ export default function About(){
                     My first scary movie was none other than The Texas Chainsaw Massicure, and come to find out that is loosely based on
                     a real life Serial killer. That is where my plung in to true crime all began. Along the way I have also become
                     obsessed with other spooky things like cursed items, ghost, and folklour. So if you have found yourself here im guessing 
-                    you also have an intrest in the macob! Well now we can talk about/learn about it together! 
+                    you also have an intrest in the macabre! Well now we can talk about/learn about it together! 
                 </p>
                 <div>
                     <h2>Here are a few of my favoite spooky things:</h2>
