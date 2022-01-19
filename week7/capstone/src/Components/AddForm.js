@@ -1,7 +1,7 @@
 //add a new podcast to your list
 import { useState } from "react"
 import {v4 as uuidv4} from 'uuid';
-import Podcast from "./SongSearch";
+
 
 export default function AddForm({podName, genre, id}){
 //can i put my add function here?
@@ -29,7 +29,7 @@ export default function AddForm({podName, genre, id}){
     return(
         <>
             <form onSubmit={handleSubmit}>
-                <h1>Favorite Podcast</h1>
+                <h1 id='formHeader'>Found a Podcast you like add it here!</h1>
                 <input
                     type = 'text'
                     name = 'podName'
@@ -38,20 +38,20 @@ export default function AddForm({podName, genre, id}){
                     onChange = {onChangeData}
                 ></input>
 
-                <input
+                {/* <input
                     type = 'text'
                     name = 'genre'
                     value = {formInput.genre}
                     placeholder="Podcast Genre"
                     onChange = {onChangeData}
-                ></input>
+                ></input> */}
 
                 <button>Add Podcast</button>
             </form>
 
             <h2>{array.map(podcast => {
                 return(
-                    <div>Name: {podcast.podName} Genre: {podcast.genre}</div>
+                    <div>Name: {podcast.podName} </div>
                 )
             })}</h2>
         </>

@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Listbox = props => {
-
+ console.log(props)
     const clicked = e => {
         e.preventDefault();
         props.clicked(e.target.id);
