@@ -1,7 +1,7 @@
 //add a new podcast to your list
 import { useState } from "react"
 import {v4 as uuidv4} from 'uuid';
-import Podcast from "./SongSearch";
+
 
 export default function AddForm({podName, genre, id}){
 //can i put my add function here?
