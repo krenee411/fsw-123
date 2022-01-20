@@ -1,9 +1,4 @@
-<<<<<<< HEAD
-import axios from "axios";
-import { useState, useEffect } from "react";
-import AddForm from "../Components/AddForm";
-import DeleteForm from "../Components/DeleteForm";
-=======
+
 import React, { useState, useEffect } from 'react';
 import Dropdown from '../Components/Dropdown'
 import Listbox from '../Components/Listbox'
@@ -11,7 +6,7 @@ import Detail from '../Components/Detail'
 import { Credentials } from '../Components/Credentials'
 import axios from 'axios';
 import AddForm from '../Components/AddForm'
->>>>>>> 632f0292b0a4d1f94cf7da9d10d391299aa661c7
+
 
 
 export default function SearchForm(){
@@ -67,11 +62,6 @@ axios.get(`http://localhost:9000/dataArray/search/query?query=${searchTitle}`)
   }
 
 
-<<<<<<< HEAD
-   
-   
-
-
     const mapList = listArray.map(list =>
         <DeleteForm
         {...list}
@@ -90,8 +80,8 @@ axios.get(`http://localhost:9000/dataArray/search/query?query=${searchTitle}`)
                 addData={addData}
                 btnTx="Add Podcast"
             />
+            )
                 <h1>Type in the name of the killer you want to know about!</h1>
-=======
   return (
     <div className="searchForm">
     <AddForm/>
@@ -109,8 +99,6 @@ axios.get(`http://localhost:9000/dataArray/search/query?query=${searchTitle}`)
           </div>        
       </form>
     </div>
-    
->>>>>>> 632f0292b0a4d1f94cf7da9d10d391299aa661c7
     
                 {mapList}
                     <input 

@@ -6,21 +6,17 @@ const {v4:uuidv4} = require('uuid')
 const  listArray = [
     {podname: "podcast", id: uuidv4()}
 ]
-
+console.log(listArray)
 ListRouter
     //get all
     .get('/',(req,res) => {
-        res.send(listArray)// 200 good request
+        res.send(listArray)
     })
 
     //get one
-    .get('/:ListId',(req, res, next) => {
+    .get('/:ListId',(req, res) => {
         const ListId = req.params.ListId;
         const oneItem = listArray.find(item => item.id === ListId);
-        if(!oneItem){
-            const error= new Error("Sorry that show was not found")
-            return next(error)
-        }
         res.send(oneItem)
     })
 
@@ -31,7 +27,7 @@ ListRouter
         console.log(oneItem, req.body)
         const updatedItems = Object.assign(listArray[oneItem], req.body)
         console.log(updatedItems)
-        res.status(201).send("New data was successfully added")
+        res.send("New data was successfully added")
     })
 
     //delete
