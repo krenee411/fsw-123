@@ -1,0 +1,210 @@
+#NavBar{
+    display:flex;
+    justify-content: right;
+    list-style-type: none;
+    font-size: 25px;
+    font-family:fantasy;
+    background-color: black;
+    padding: 10px;
+    margin: 0px;
+    color:blanchedalmond;
+}
+
+.link:hover{
+    padding:2px;
+}
+#header{
+    font-size: 40px;
+    text-decoration: underline;
+    color: darkgrey;
+    text-align: center;
+    text-shadow: 2px 2px rgb(85, 32, 32);
+    margin: 0px;
+    padding-bottom: 30px;
+}
+
+#v{
+    color: red;
+}
+
+.card{
+    text-align: center;
+}
+
+#body{
+    background-image: url(https://images.unsplash.com/photo-1505635552518-3448ff116af3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0px;
+    padding-bottom: 200px;
+}
+
+summary{
+    font-size: 30px;
+    font-family: fantasy;
+    color:rgb(75, 73, 73) ;
+}
+
+summary:hover{
+    color:rgb(107, 98, 98);
+    
+}
+
+
+#nameLable{
+    color: gray;
+    padding-left: 13px;
+}
+
+#msgLable{
+    color:gray;
+}
+
+.form{
+   text-align: center;
+}
+
+#emailH3{
+    text-align: center;
+    color: darkgrey;
+    font-size: bold;
+   
+}
+
+#bodyAbout{
+    color: darkgrey;
+    text-align: center;
+    font-size: large;
+    line-height: 25px;
+    padding-bottom: 200px;
+    
+}
+
+#aboutMain{
+    background-image: url(https://images.unsplash.com/photo-1597299407241-638aa26e56c6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=857&q=80);
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+#ul{
+    list-style-type:none;
+}
+
+.blogP{
+    font-size:large;
+    color: black;
+    background-color: rgb(129, 128, 127);
+    opacity: 0.5;
+    padding: 25px;
+    line-height: 25px;
+}
+
+#emailDiv{
+    padding-bottom: 50px;
+}
+a{
+    color: rgb(189, 184, 184);
+    
+}
+a:hover{
+    color: red;
+}
+
+#teamLable{
+    color: black;
+    font-size: bold;
+}
+
+#searchBody{
+    background-image: url(https://images.unsplash.com/photo-1511406361295-0a1ff814c0ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: green;
+    text-align: center;
+    margin-top: 0px;
+    padding-bottom: 100px;
+}
+
+#blogHeader{
+    color: rgb(189, 184, 184);
+    text-align: center;
+    margin-top: 0px;
+    text-decoration: underline;
+
+}
+
+#searchHeader{
+    color: green;
+    text-align: center;
+    margin: 0px;
+}
+
+#homeBody{
+    background-image: url(https://images.unsplash.com/flagged/photo-1591553234204-2d05772ba364?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTV8fGJsb29kfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0px;
+    padding-bottom: 200px;
+}
+
+#homeHeader{
+    margin: 0px;
+    text-align: center;
+    font-size: 50px;
+    text-decoration: underline;
+    text-shadow: 2px 2px black;
+    color:rgb(115, 110, 128);
+    
+}
+
+.homeP{
+    color: rgb(115, 110, 128);
+    text-align: center;
+    font-size: 20px;
+}
+
+
+#table{
+    margin: auto;
+    box-sizing:content-box;
+    border: double;
+    font-weight: bold;
+    color:rgb(115, 110, 128);
+}
+
+#findUs{
+    color:rgb(115, 110, 128);
+    text-align: center;
+    text-decoration: overline;
+}
+
+.media{
+    color: rgb(52, 52, 180);
+    font-size: xx-large;
+    padding:4px;
+}
+
+#ospan{
+    text-decoration: underline;
+}
+th{
+    text-decoration: underline;
+}
+
+#underline{
+    text-decoration: white underline;
+}
+
+#searchForm{
+    background-image: url(https://images.unsplash.com/photo-1511406361295-0a1ff814c0ce?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: green;
+    text-align: center;
+    margin-top: 0px;
+    padding-bottom: 100px;
+    padding-bottom: 500px;
+}
+#formHeader{
+    margin-top: 0px;
+}
