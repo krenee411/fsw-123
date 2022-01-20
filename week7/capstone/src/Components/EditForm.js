@@ -27,7 +27,7 @@ const handleSubmit = (e) => {
                     <input 
                         name= "edit Todo"
                         type= "text" 
-                        value={currentShow.text.length ? currentShow.text : props.text}
+                        value={currentShow.podName.length ? currentShow.podName : props.podName}
                         id = "editInfo" 
                         onChange = {(e) =>onChangeData(e)}>
                     </input>

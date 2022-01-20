@@ -1,20 +1,11 @@
 //add a new podcast to your list
 import { useState } from "react"
-import {v4 as uuidv4} from 'uuid';
 
+export default function AddForm({addData, btnTx, podName, id}){
 
-export default function AddForm({podName, genre, id}){
-//can i put my add function here?
-/*
-    const addData=(podName, genre) => {
-    const newTodo = {podName: `${podName}`, genre:`${genre}`, id: uuidv4()}
-    copiedArray.push(newTodo)
-    setGetData(copiedArray)
-    }*/
-
-    const ogdata = {podName: podName || '', genre: genre || '', id: uuidv4()}
+    const ogdata = {podName: podName || ''}
     const [formInput, setFormInput] = useState(ogdata)
-    const [array, setArray] = useState([])
+    
 
     const onChangeData = (e) => {
         const {name,value} = e.target
@@ -23,13 +14,14 @@ export default function AddForm({podName, genre, id}){
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        setArray([...array, formInput])
+        addData(formInput, id)
         setFormInput(ogdata)
     }
     return(
-        <>
-            <form onSubmit={handleSubmit}>
-                <h1 id='formHeader'>Found a Podcast you like add it here!</h1>
+        
+        <form onSubmit={handleSubmit}>
+                
+            <h1 id='formHeader'>Found a Podcast you like add it here!</h1>
                 <input
                     type = 'text'
                     name = 'podName'
@@ -37,23 +29,8 @@ export default function AddForm({podName, genre, id}){
                     placeholder="Podcast Name"
                     onChange = {onChangeData}
                 ></input>
+                <button>{btnTx}</button>
+        </form>
 
-                {/* <input
-                    type = 'text'
-                    name = 'genre'
-                    value = {formInput.genre}
-                    placeholder="Podcast Genre"
-                    onChange = {onChangeData}
-                ></input> */}
-
-                <button>Add Podcast</button>
-            </form>
-
-            <h2>{array.map(podcast => {
-                return(
-                    <div>Name: {podcast.podName} </div>
-                )
-            })}</h2>
-        </>
     )
 }

@@ -4,14 +4,15 @@ var cors = require('cors')
 app.use(cors())
 
 
-const DataRouter = require('./capstone/DataRouter/DataRouter')
-const PORT = 9000;
+const ListRouter = require('./capstone/DataRouter/ListRouter')
+const PORT = 8000;
 
 //middleware
 app.use(express.json())
 
 //routes
-app.use('/dataArray', DataRouter)
+
+app.use('/listArray', ListRouter)
 
 app.get('/products/:id', function (req, res, next) {
     res.json({msg: 'This is CORS-enabled for all origins!'})
@@ -23,8 +24,8 @@ app.use((err, req, res, next) =>{
   return res.send({errMsg: err.message})
 })
   
-app.listen(90, function () {
-    console.log('CORS-enabled web server listening on port 90')
+app.listen(80, function () {
+    console.log('CORS-enabled web server listening on port 80')
 })
 
 app.listen(PORT, () => {

@@ -2,14 +2,14 @@
 import { useState } from "react"
 import EditForm from "./EditForm"
 
-export default function DeleteForm({deleteData, editData, id, showName}){
+export default function DeleteForm({deleteData, editData, id, podName}){
     const [toggle, setToggle] = useState(false)
-console.log(showName)
+console.log(podName)
     return(
         <div>
             {!toggle ?
             <>
-                <h1>{showName}</h1>
+                <h1>{podName}</h1>
                     <button
                         onClick={()=> deleteData(id)}
                         id = 'delete'>
@@ -24,7 +24,7 @@ console.log(showName)
             :
             <>
                 <EditForm
-                    showName={showName}
+                    podName={podName}
                     id={id}
                     editData={editData}
                     btnTx="submit edits"
