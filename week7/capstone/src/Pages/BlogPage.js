@@ -140,8 +140,6 @@ export default function Blog(){
                <h3> <a href="https://www.inputmag.com/features/dybbuk-box-dibbuk-kevin-mannis-zak-bagans-haunted-hoax-revealed">Finally, the truth behind the ‘haunted’ Dybbuk Box can be revealed</a></h3>
                <h3> <a href="https://www.thoughtco.com/profile-of-serial-killer-jeffrey-dahmer-973116">Biography:Jeff Dahmer</a></h3>
                <h3> <a href="https://storiesoftheunsolved.com/2019/02/11/the-disappearance-of-bryce-laspisa/">The Strange and Mysterious Disappearance of Bryce Laspisa</a></h3>
-               <h3> <a href='https://monster.fandom.com/wiki/Rougarou'>Rougarou Image</a></h3>
-               <h3> <a href="https://www.shutterstock.com/image-photo/wooden-arabian-old-jewelry-box-1010246998">Dybbuk box image </a></h3>
             
 
      </body>

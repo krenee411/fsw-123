@@ -15,6 +15,10 @@ export default function Home(){
                     <h2> will find all the scary things that you are<span id='ospan'> OBSESSED</span> with! </h2>
                     <h2>Consider this your big spooky scary home!</h2>
                     <h2>All your goulish needs in one place</h2>
+
+                    <h2>New Podcast episodes and creepy killers are added daily</h2>
+                    <h2>Be sure to check back in for updates or sign up for our </h2>
+                    <h2>New Letter! You will always be up-to-date and in the know</h2>
                 </div>
                     <table id= "table"> 
                         <h3>Our Blog updates:</h3>

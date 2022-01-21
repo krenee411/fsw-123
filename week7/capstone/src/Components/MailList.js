@@ -16,7 +16,7 @@ export default function MailList(){
 
 
             <div id='emailDiv'>
-                <h3 id='emailH3'>Do you want to be the first to know about updates?</h3>
+                <h3 id='emailH3'>Do you want to be the first to know about updates? Sigh up for out News Letter!</h3>
                 <form class='form' onSubmit={handleSubmit(complete)}>
                     <div>
                         <lable id='nameLable'>Enter your E-mail:</lable>
