@@ -26,7 +26,8 @@ console.log(podName)
                 <EditForm
                     podName={podName}
                     id={id}
-                    editData={editData}
+                    editItem={editData}
+                    setEditToggle={setToggle}
                     btnTx="submit edits"
                 />
                 <button

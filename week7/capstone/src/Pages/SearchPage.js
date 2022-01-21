@@ -13,7 +13,7 @@ const [listArray, setListArray] = useState([])
   //get all
 
   const getListArray = () => {
-    axios.get('/listArray')
+    axios.get('http://localhost:8000/listArray')
     .then(res => setListArray(res.data))
     .catch(err => console.log(err))
 }
@@ -29,23 +29,26 @@ axios.get(`http://localhost:9000/dataArray/search/query?query=${searchTitle}`)
 
   //post-add new data
   const addData = (newItem) => {
-    axios.post('/listArray', newItem)
-    .then(res =>{
+    
+    axios.post('http://localhost:8000/listArray', newItem)
+    .then(res =>{ 
+      console.log(newItem, res.data)
       setListArray(item => [...item, res.data])
-    })
+      console.log(listArray)
+    }).catch(err => console.log(err))
   }
 
   //delete
   const deleteData = (ListId) => {
-    axios.delete(`/listArray/${ListId}`)
+    axios.delete(`http://localhost:8000/listArray/${ListId}`)
     .then(res => {
       setListArray(item => item.filter(item => item.id !== ListId))
     })
   }
 
   // edit || put
-  const editData = (update,ListId) => {
-    axios.put(`/listArray/${ListId}`, update)
+  const editData = (ListId, update) => {
+    axios.put(`http://localhost:8000/listArray/${ListId}`, update)
     .then(res => {
       setListArray(item => item.map(item => item.id !== ListId ? item: res.data))
     })
@@ -67,10 +70,10 @@ axios.get(`http://localhost:9000/dataArray/search/query?query=${searchTitle}`)
         <>
             <div id='searchForm'>
             <AddForm
-              {...mapList}
               addData={addData}
               btnTx="Add Podcast"
             />
+            {mapList}
                 <h1>Type in the name of the killer you want to know about!</h1>
                     <input 
                       type = 'text'

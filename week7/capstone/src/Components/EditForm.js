@@ -5,11 +5,11 @@ import {useState} from 'react'
 export default function EditForm(props){
 
 //const [editToggle, setEditToggle] = useState(false)
-const [currentShow, setCurrentShow] = useState('')
+const [currentShow, setCurrentShow] = useState({podName: ""})
 console.log(props)
 
 const onChangeData = (e) => {
-    setCurrentShow({ ...currentShow, text: e.target.value });
+    setCurrentShow({ ...currentShow, podName: e.target.value });
     console.log(currentShow);
 
 }

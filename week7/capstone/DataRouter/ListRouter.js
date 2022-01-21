@@ -4,7 +4,7 @@ const {v4:uuidv4} = require('uuid')
 
 
 const  listArray = [
-    {podname: "podcast", id: uuidv4()}
+    {podName: "podcast", id: uuidv4()}
 ]
 console.log(listArray)
 ListRouter
@@ -27,7 +27,7 @@ ListRouter
         console.log(oneItem, req.body)
         const updatedItems = Object.assign(listArray[oneItem], req.body)
         console.log(updatedItems)
-        res.send("New data was successfully added")
+        res.send(listArray[oneItem])
     })
 
     //delete
@@ -41,8 +41,10 @@ ListRouter
     //add
     .post('/',(req,res) => {
         const newData = req.body;
+        console.log(req.body)
         newData.id = uuidv4();
         listArray.push(newData)
+        res.send(newData)
     })
 
 module.exports = ListRouter;
